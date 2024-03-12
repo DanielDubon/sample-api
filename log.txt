@@ -10,3 +10,24 @@
 2024-03-11T01:13:24.509Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"MECH reinforcements","content":"The mechs are comming to help helldivers!","planet":"Super earth","enemy":"none","urgency":"high"},{"id":3,"title":"Bile Titans Evolution","content":"Inteligence has new information about the next evolution for terminids, be aware.","planet":"rixys","enemy":"terminids","urgency":"high"},{"id":4,"title":"Helldivers Mission","content":"Important information to hell divers come to super earth","planet":"Super earth","enemy":"none","urgency":"high"}]
 2024-03-11T01:13:31.076Z - GET /posts/4 - Request Payload: {} - Response: {"id":4,"title":"Helldivers Mission","content":"Important information to hell divers come to super earth","planet":"Super earth","enemy":"none","urgency":"high"}
 2024-03-11T01:13:49.852Z - GET /posts - Request Payload: {"title":"Helldivers Mission","content":"Important information to hell divers come to super earth","planet":"Super earth","enemy":"none","urgency":"high"} - Response: [{"id":1,"title":"MECH reinforcements","content":"The mechs are comming to help helldivers!","planet":"Super earth","enemy":"none","urgency":"high"},{"id":3,"title":"Bile Titans Evolution","content":"Inteligence has new information about the next evolution for terminids, be aware.","planet":"rixys","enemy":"terminids","urgency":"high"},{"id":4,"title":"Helldivers Mission","content":"Important information to hell divers come to super earth","planet":"Super earth","enemy":"none","urgency":"high"}]
+2024-03-12T00:22:09.282Z - GET / - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:22:09.353Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:28:34.632Z - GET / - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:28:34.686Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:28:38.451Z - GET /posts - Request Payload: {} - Response: []
+2024-03-12T00:28:38.627Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:28:53.435Z - POST /posts - Request Payload: {"title":"Helldivers Mission","content":"Important information to hell divers come to super earth","planet":"Super earth","enemy":"none","urgency":"high"} - Response: {"message":"Post created successfully","postId":1}
+2024-03-12T00:28:56.260Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"Helldivers Mission","content":"Important information to hell divers come to super earth","planet":"Super earth","enemy":"none","urgency":"high"}]
+2024-03-12T00:28:56.277Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:45:45.303Z - GET /posts - Request Payload: {} - Response: 
+2024-03-12T00:45:45.324Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:46:03.760Z - GET /docs/swagger - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:46:03.809Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:46:18.799Z - GET /docs/swagger.yaml - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:46:18.835Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:46:29.735Z - GET /swagger.yaml - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:46:29.771Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:49:42.056Z - GET /docs/swagger.yaml - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:49:42.116Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:49:46.021Z - GET /docs/ - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T00:49:46.062Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}

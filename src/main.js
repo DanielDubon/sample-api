@@ -3,29 +3,12 @@ import fs from 'fs';
 import { getAllPosts , createPost, getPostById, updatePost, deletePost} from './db.js'
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+import YAML from 'yamljs'
 
-const swaggerDefinition = {
-  openapi: '3.0.0',
-  info: {
-    title: 'Express API para Blog',
-    version: '1.0.0',
-    description: 'Esta es la documentación de la API para mi aplicación de Blog.',
-  },
-  servers: [
-    {
-      url: 'http://localhost:3000',
-      description: 'Servidor de desarrollo',
-    },
-  ],
-};
 
-const options = {
-  swaggerDefinition,
 
-  apis: ['./routes/*.js', './schemas/*.js'], 
-};
 
-const swaggerSpec = swaggerJsdoc(options);
+
 
 const app = express()
 app.use(express.json())
@@ -36,35 +19,11 @@ app.use(express.json())
 
 
 
-app.use((req, res, next) => {
-  const oldWrite = res.write;
-  const oldEnd = res.end;
-  const chunks = [];
-
-  res.write = function (chunk) {
-    chunks.push(chunk);
-    return oldWrite.apply(res, arguments);
-  };
-
-  res.end = function (chunk) {
-    if (chunk) {
-      chunks.push(chunk);
-    }
-    const body = Buffer.concat(chunks).toString('utf8');
-    const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - Request Payload: ${JSON.stringify(req.body)} - Response: ${body}\n`;
 
 
-    fs.appendFile('log.txt', logEntry, (err) => {
-      if (err) throw err;
-    });
+const swaggerDocument = YAML.load('./docs/swagger.yaml')
 
-    oldEnd.apply(res, arguments);
-  };
-
-  next();
-});
-
-
+app.use('/docs',swaggerUi.serve,swaggerUi.setup(swaggerDocument))
 
 
 
@@ -78,7 +37,7 @@ app.get('/posts', async (req, res) => {
 
 
 app.post('/posts', async (req, res) => {
-  const { title, content, planet, enemy, urgency } = req.body
+  const { title, content, planet, enemy, urgency } = req.body 
 
   try {
      

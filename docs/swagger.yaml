@@ -1,0 +1,103 @@
+swagger: '2.0'
+info:
+  description: 'API Helldivers News'
+  version: '1.0.0'
+  title: 'API blog por la democracia y la libertad'
+host: 'localhost:3000'
+basePath: '/'
+schemes:
+  - 'http'
+paths:
+  /posts:
+    get:
+      summary: 'Obtiene todas las noticias de los helldivers con su titulo contenido planeta enemigo y urgencia que tienen'
+      responses:
+        200:
+          description: 'Noticias de helldivers'
+          schema:
+            type: 'array'
+            items:
+              $ref: '#/components/schemas/Post'
+    post:
+      summary: 'Crea un nuevo post, se tendrán que ingresar el título, contenido, planeta, enemigo, urgencia e imagen de la build en formato base64 del post.'
+      consumes:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Crea nuevo post ingresa titulo contenido planeta enemigo y urgencia por cada uno'
+          required: true
+          schema:
+            $ref: '#/components/schemas/Post'
+      responses:
+        200:
+          description: 'Post creado exitosamente.'
+
+  /posts/{postId}:
+    get:
+      summary: 'Obtiene un post buscado por ID.'
+      parameters:
+        - in: 'path'
+          name: 'postId'
+          required: true
+          type: 'integer'
+          description: 'Obtiene post especificado'
+      responses:
+        400:
+          description: 'Post no encontrado'
+          schema:
+            $ref: '#/definitions/Post'
+        500:
+          description: 'Error en la respuesta de la api'
+
+    put:
+      summary: 'Actualiza un post existente.'
+      consumes:
+        - 'application/json'
+      parameters:
+        - in: 'path'
+          name: 'postId'
+          required: true
+          type: 'integer'
+          description: 'El ID del post a actualizar'
+        - in: 'body'
+          name: 'body'
+          description: 'Información actualizada del post'
+          required: true
+          schema:
+            $ref: '#/components/schemas/Post'
+      responses:
+        400:
+          description: 'Post no encontrado'
+        500:
+          description: 'Error al experar respuesta de la api'
+
+    delete:
+      summary: 'Elimina un post específico.'
+      parameters:
+        - in: 'path'
+          name: 'postId'
+          required: true
+          type: 'integer'
+          description: 'El ID del post a borrar'
+      responses:
+        400:
+          description: 'Post no encontrado'
+        500:
+          description: 'Error en respuesta de la api'
+definitions:
+   schemas:
+    Post:
+      type: object
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+        planet:
+          type: string
+        enemy:
+          type: string
+        urgency:
+          type: boolean
+        
