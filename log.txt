@@ -31,3 +31,24 @@
 2024-03-12T00:49:42.116Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
 2024-03-12T00:49:46.021Z - GET /docs/ - Request Payload: {} - Response: {"message":"Not Implemented"}
 2024-03-12T00:49:46.062Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:14:40.485Z - GET /posts/1 - Request Payload: {} - Response: 
+2024-03-12T01:14:40.508Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:14:43.324Z - GET /posts/1 - Request Payload: {} - Response: 
+2024-03-12T01:14:43.353Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:14:44.322Z - GET /posts/1 - Request Payload: {} - Response: 
+2024-03-12T01:14:44.345Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:14:47.322Z - GET /posts/2 - Request Payload: {} - Response: {"message":"Post not found"}
+2024-03-12T01:14:47.371Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:14:50.075Z - GET /posts/1 - Request Payload: {} - Response: 
+2024-03-12T01:14:50.108Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:14:53.183Z - GET /posts - Request Payload: {} - Response: 
+2024-03-12T01:14:53.813Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:15:01.653Z - GET /posts - Request Payload: {} - Response: 
+2024-03-12T01:15:01.679Z - GET /swagger-ui.css - Request Payload: {} - Response: 
+2024-03-12T01:15:01.682Z - GET /swagger-ui-init.js - Request Payload: {} - Response: 
+2024-03-12T01:15:01.683Z - GET /swagger-ui-bundle.js - Request Payload: {} - Response: 
+2024-03-12T01:15:01.686Z - GET /swagger-ui-standalone-preset.js - Request Payload: {} - Response: 
+2024-03-12T01:15:42.826Z - GET /posts - Request Payload: {} - Response: 
+2024-03-12T01:15:44.005Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-12T01:15:46.860Z - GET /posts/1 - Request Payload: {} - Response: 
+2024-03-12T01:15:47.266Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}

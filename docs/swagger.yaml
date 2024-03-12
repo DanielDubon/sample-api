@@ -17,7 +17,7 @@ paths:
           schema:
             type: 'array'
             items:
-              $ref: '#/components/schemas/Post'
+              $ref: '#/definitions/Post'
     post:
       summary: 'Crea un nuevo post, se tendrán que ingresar el título, contenido, planeta, enemigo, urgencia e imagen de la build en formato base64 del post.'
       consumes:
@@ -28,7 +28,7 @@ paths:
           description: 'Crea nuevo post ingresa titulo contenido planeta enemigo y urgencia por cada uno'
           required: true
           schema:
-            $ref: '#/components/schemas/Post'
+            $ref: '#/definitions/Post'
       responses:
         200:
           description: 'Post creado exitosamente.'
@@ -65,7 +65,7 @@ paths:
           description: 'Información actualizada del post'
           required: true
           schema:
-            $ref: '#/components/schemas/Post'
+            $ref: '#/definitions/Post'
       responses:
         400:
           description: 'Post no encontrado'
@@ -86,7 +86,6 @@ paths:
         500:
           description: 'Error en respuesta de la api'
 definitions:
-   schemas:
     Post:
       type: object
       properties:
@@ -99,5 +98,5 @@ definitions:
         enemy:
           type: string
         urgency:
-          type: boolean
+          type: string
         

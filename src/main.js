@@ -19,11 +19,42 @@ app.use(express.json())
 
 
 
+app.use((req, res, next) => {
+  const oldWrite = res.write;
+  const oldEnd = res.end;
+  const chunks = [];
+
+  res.write = function (chunk) {
+    chunks.push(chunk);
+    return oldWrite.apply(res, arguments);
+  };
+
+  res.end = function (chunk) {
+    if (chunk) {
+      chunks.push(chunk);
+    }
+    const body = Buffer.concat(chunks).toString('utf8');
+    const logEntry = `${new Date().toISOString()} - ${req.method} ${req.url} - Request Payload: ${JSON.stringify(req.body)} - Response: ${body}\n`;
+
+
+    fs.appendFile('log.txt', logEntry, (err) => {
+      if (err) throw err;
+    });
+
+    oldEnd.apply(res, arguments);
+  };
+
+  next();
+});
+
 
 
 const swaggerDocument = YAML.load('./docs/swagger.yaml')
 
 app.use('/docs',swaggerUi.serve,swaggerUi.setup(swaggerDocument))
+
+
+
 
 
 
