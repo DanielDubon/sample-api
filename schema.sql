@@ -1,10 +1,10 @@
-CREATE USER IF NOT EXISTS 'blog_dubon'@'%' IDENTIFIED BY 'dubon';
-GRANT ALL PRIVILEGES ON blog_db.* TO 'blog_dubon'@'%' WITH GRANT OPTION;
+CREATE USER IF NOT EXISTS 'dubon'@'%' IDENTIFIED BY 'dubon';
+GRANT ALL PRIVILEGES ON blog_dubon.* TO 'dubon'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
-USE blog_db;
+USE blog_dubon;
 
-CREATE TABLE IF NOT EXISTS blog_posts (
+CREATE TABLE IF NOT EXISTS blog_helldivers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
