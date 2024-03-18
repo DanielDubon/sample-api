@@ -164,3 +164,5 @@
 2024-03-13T01:05:38.849Z - POST /posts - Request Payload: {"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"} - Response: {"message":"Post created successfully","postId":1}
 2024-03-13T01:05:41.495Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
 2024-03-13T01:05:41.529Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-18T21:42:36.981Z - GET /main.js - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-18T21:42:46.581Z - GET /post - Request Payload: {} - Response: {"message":"Not Implemented"}
