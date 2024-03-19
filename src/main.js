@@ -2,12 +2,14 @@ import express from 'express'
 import fs from 'fs'
 import YAML from 'yamljs'
 import swaggerUi from 'swagger-ui-express'
+import cors from 'cors'
 
 import {
   getAllPosts, createPost, getPostById, updatePost, deletePost,
 } from './db.js'
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 
 app.use((req, res, next) => {

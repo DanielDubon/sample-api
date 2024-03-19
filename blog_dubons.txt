@@ -1,0 +1,5 @@
+
+> sample-api@1.0.0 start
+> node src/main.js
+
+Server listening at http://127.0.0.1:22233

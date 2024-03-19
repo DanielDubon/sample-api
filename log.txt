@@ -166,3 +166,28 @@
 2024-03-13T01:05:41.529Z - GET /favicon.ico - Request Payload: {} - Response: {"message":"Not Implemented"}
 2024-03-18T21:42:36.981Z - GET /main.js - Request Payload: {} - Response: {"message":"Not Implemented"}
 2024-03-18T21:42:46.581Z - GET /post - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-18T22:10:31.648Z - GET / - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-18T22:10:45.302Z - GET /hello - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-18T22:20:12.771Z - GET /hello - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-18T22:20:17.007Z - GET / - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-19T00:34:07.182Z - GET /swagger - Request Payload: {} - Response: {"message":"Not Implemented"}
+2024-03-19T00:34:13.180Z - GET /posts - Request Payload: {} - Response: []
+2024-03-19T00:49:14.803Z - GET /posts - Request Payload: {} - Response: 
+2024-03-19T00:49:25.162Z - GET /posts - Request Payload: {"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"} - Response: []
+2024-03-19T00:49:39.005Z - POST /posts - Request Payload: {"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"} - Response: {"message":"Post created successfully","postId":1}
+2024-03-19T00:49:42.600Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T00:59:48.963Z - GET /posts - Request Payload: {} - Response: 
+2024-03-19T01:02:10.605Z - GET /posts - Request Payload: {} - Response: 
+2024-03-19T01:07:35.469Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:08:16.123Z - GET /posts - Request Payload: {"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:09:44.205Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:09:46.076Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:09:48.360Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:10:00.623Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:10:54.120Z - GET /posts - Request Payload: {"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:18:21.081Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:18:54.275Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:19:03.510Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:21:15.909Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:21:26.997Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
+2024-03-19T01:22:03.362Z - GET /posts - Request Payload: {} - Response: [{"id":1,"title":"FINAL Mission","content":"The iluminates are comming","planet":"no info","enemy":"iluminates","urgency":"EXTREME"}]
