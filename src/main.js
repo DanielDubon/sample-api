@@ -5,7 +5,7 @@ import swaggerUi from 'swagger-ui-express'
 import cors from 'cors'
 
 import {
-  getAllPosts, createPost, getPostById, updatePost, deletePost,
+  getAllPosts, createPost, getPostById, updatePost, deletePost, login,
 } from './db.js'
 
 const app = express()
@@ -40,6 +40,28 @@ app.get('/posts', async (req, res) => {
   const posts = await getAllPosts()
   res.json(posts)
 })
+
+
+app.post('/admin/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+   
+    const loginResult = await login(username, password);
+
+    
+    if (loginResult.success) {
+      
+      res.json({ success: true, message: 'Inicio de sesión exitoso', token: 'your_generated_token_here' });
+    } else {
+      res.status(401).json({ success: false, message: 'Credenciales inválidas' });
+    }
+  } catch (error) {
+    console.error('Error en la función de inicio de sesión:', error);
+    res.status(500).json({ success: false, message: 'Error en el servidor' });
+  }
+});
+
 
 app.post('/posts', async (req, res) => {
   const {
