@@ -3,6 +3,7 @@ import fs from 'fs'
 import YAML from 'yamljs'
 import swaggerUi from 'swagger-ui-express'
 import cors from 'cors'
+import jwt from 'jsonwebtoken'
 
 import {
   getAllPosts, createPost, getPostById, updatePost, deletePost, login,
@@ -51,8 +52,8 @@ app.post('/admin/login', async (req, res) => {
 
     
     if (loginResult.success) {
-      
-      res.json({ success: true, message: 'Inicio de sesión exitoso', token: 'your_generated_token_here' });
+      const token = jwt.sign({ username }, 'HellDiversToken', { expiresIn: '1h' });      
+      res.json({ success: true, message: 'Inicio de sesión exitoso', token });
     } else {
       res.status(401).json({ success: false, message: 'Credenciales inválidas' });
     }
