@@ -12,27 +12,11 @@ import {
 const app = express()
 app.use(cors())
 app.use(express.json())
-const router = express.Router();
 
-router.get('/admin/check-auth', async (req, res) => {
-  const token = req.headers.authorization.split(' ')[1]; // Obtener el token del encabezado de autorización
-  if (!token) {
-    // Si no se proporciona un token, el usuario no está autenticado
-    return res.status(401).json({ success: false, message: 'Token not provided' });
-  }
 
-  // Verificar la autenticación del usuario utilizando la función checkAuth
-  const isAuthenticated = await checkAuth(token);
-  if (isAuthenticated) {
-    // Si el usuario está autenticado, devolver una respuesta exitosa
-    return res.status(200).json({ success: true, message: 'User authenticated' });
-  } else {
-    // Si el token no es válido o ha expirado, el usuario no está autenticado
-    return res.status(401).json({ success: false, message: 'Unauthorized' });
-  }
-});
 
-export default router;
+
+
 
 app.use((req, res, next) => {
   const oldWrite = res.write
@@ -55,6 +39,28 @@ app.use((req, res, next) => {
   }
   next()
 })
+
+
+
+app.get('/admin/check-auth', async (req, res) => {
+  const token = req.headers.authorization.split(' ')[1]; // Obtener el token del encabezado de autorización
+  if (!token) {
+    // Si no se proporciona un token, el usuario no está autenticado
+    return res.status(401).json({ success: false, message: 'Token not provided' });
+  }
+
+  // Verificar la autenticación del usuario utilizando la función checkAuth
+  const isAuthenticated = await checkAuth(token);
+  if (isAuthenticated) {
+    // Si el usuario está autenticado, devolver una respuesta exitosa
+    return res.status(200).json({ success: true, message: 'User authenticated' });
+  } else {
+    // Si el token no es válido o ha expirado, el usuario no está autenticado
+    return res.status(401).json({ success: false, message: 'Unauthorized' });
+  }
+});
+
+
 
 const swaggerDocument = YAML.load('./docs/swagger.yaml')
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
