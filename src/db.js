@@ -50,3 +50,16 @@ export async function login(username, password) {
     return { success: false, message: 'Error en la función de inicio de sesión' };
   }
 }
+
+
+export async function checkAuth(token) {
+  try {
+    // Verificar si el token es válido
+    const decoded = jwt.verify(token, 'HellDiversToken');
+    // Si el token es válido, el usuario está autenticado
+    return true;
+  } catch (error) {
+    // Si hay un error al verificar el token, el usuario no está autenticado
+    return false;
+  }
+}
